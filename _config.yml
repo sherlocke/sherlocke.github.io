@@ -1,0 +1,16 @@
+# Site settings
+title: "Sherlocke: Powered by IBM Watson"
+email: your-email@domain.com
+description: With the power of IBM Watson, Sherlocke enhances CanLII.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://sherlocke.me"
+twitter_username: unhaltable
+github_username:  unhaltable
+
+# Build settings
+markdown: kramdown
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: :compressed
