@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    <div id="hero">
+      <div id="hero-content">
+        <div id="hero-logo">Sherlocke: Powered by IBM Watson</div>
+        <h2>A smart research tool for the modern age.</h2>
+      </div>
+      <a id="hero-more" href="#home-content" title="Learn more">↓</a>
+    </div>
+
+    {% include header.html %}
+
+    <div class="page-content" id="home-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

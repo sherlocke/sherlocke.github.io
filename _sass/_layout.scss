@@ -159,6 +159,51 @@
 
 
 /**
+ * Homepage
+ */
+#hero {
+  background: url(/img/5.jpg) no-repeat center center / cover;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+  #hero-content {
+    background: rgba(0,0,0,.55);
+    color: #fff;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+    #hero-logo {
+      background: url(/img/logo_white.png) no-repeat;
+      background-size: 600px 225px;
+      height: 225px;
+      margin: 0 auto;
+      text-indent: -3000em;
+      width: 600px;
+    }
+
+  #hero-more {
+    border-radius: 50%;
+    border: 1px solid #fff;
+    bottom: 1em;
+    color: #fff;
+    display: block;
+    font-size: 1.75em;
+    height: 1.5em;
+    left: 50%;
+    line-height: 1em;
+    margin-left: -1em;
+    position: absolute;
+    text-align: center;
+    width: 1.5em;
+  }
+
+
+
+/**
  * Page content
  */
 .page-content {
