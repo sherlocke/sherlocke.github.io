@@ -6,7 +6,7 @@
 
 
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-family: 'Lato', Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -47,3 +47,30 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
+#coming-soon {
+    background: #0d1117;
+    color: #fff;
+    display: table;
+    height: 100%;
+    padding: 2em;
+    text-align: center;
+    width: 100%;
+}
+
+    #coming-soon-content {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+        #coming-soon-logo {
+            background: transparent url(/img/logo_white.png) no-repeat;
+            height: 300px;
+            margin: 0 auto;
+            text-indent: -3000em;
+            width: 800px;
+        }
+
+        #coming-soon-text {
+            font-size: 1.5em;
+        }
