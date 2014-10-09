@@ -169,7 +169,7 @@
 }
 
   #hero-content {
-    background: rgba(0,0,0,.65);
+    background: rgba($brand-color,.8);
     color: #fff;
     display: table-cell;
     text-align: center;
@@ -199,7 +199,7 @@
 
       &:hover {
         background-color: #fff;
-        color: #000;
+        color: $brand-color;
       }
     }
 
