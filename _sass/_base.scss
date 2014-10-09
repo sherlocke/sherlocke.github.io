@@ -25,6 +25,16 @@ body {
   background-color: $background-color;
 }
 
+::selection {
+  background-color: #446272;
+  color: #fff;
+}
+
+::-moz-selection {
+  background-color: #446272;
+  color: #fff;
+}
+
 
 
 /**
