@@ -11,14 +11,14 @@
 }
 
 .site-title {
-  color: #fff;
+  background: url(/img/logo_white.png) no-repeat center center / cover;
   font-size: 26px;
   line-height: 56px;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
-
-  &:visited { color: #fff; }
+  text-indent: -3000em;
+  width: 200px;
 }
 
 .site-nav {
@@ -90,6 +90,7 @@
  * Site footer
  */
 .site-footer {
+  background-color: $background-color;
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
 }
@@ -159,6 +160,10 @@
 /**
  * Homepage
  */
+#home {
+  background-color: lighten($brand-color, 40%);
+}
+
 #hero {
   background: url(/img/5.jpg) no-repeat center center / cover;
   display: table;
@@ -170,6 +175,7 @@
     background: rgba($brand-color,.8);
     color: #fff;
     display: table-cell;
+    padding: 1em 1em 15%;
     text-align: center;
     vertical-align: middle;
   }
@@ -182,6 +188,14 @@
       text-indent: -3000em;
       width: 600px;
     }
+
+      @include media-query($on-palm) {
+        #hero-logo {
+          background-size: 350px 132px;
+          height: 102px;
+          width: 350px;
+        }
+      }
 
     #hero-more {
       border-radius: 0.25em;
@@ -200,6 +214,20 @@
         color: $brand-color;
       }
     }
+
+#home-about {
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+  top: -15%;
+  margin: 0 auto;
+  padding: 1em;
+  width: 80%;
+
+  h1 {
+    text-align: center;
+  }
+}
 
 
 
