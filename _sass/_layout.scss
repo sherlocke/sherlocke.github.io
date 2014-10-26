@@ -40,27 +40,12 @@
 
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 10000;
 }
 
-  #home {
-    .site-header {
-      background-color: transparent;
-    }
-
-    .site-title {
-
-    }
-
-    .site-nav {
-      .page-link {
-        color: #fff;
-      }
-    }
-  }
-
 .site-title {
-  background: url(/img/logo_white.png) no-repeat left center;
+  background: $brand-color url(/img/logo_white.png) no-repeat center center;
   background-size: auto 60%;
   font-size: 26px;
   line-height: 56px;
@@ -273,6 +258,17 @@
       }
     }
 
+    #home-more {
+      background-color: $brand-color;
+      color: #fff;
+
+      &:hover {
+        background-color: #fff;
+        color: $brand-color;
+        text-decoration: none;
+      }
+    }
+
 .home-card {
   background-color: #fff;
   border-radius: 5px;
@@ -287,7 +283,7 @@
   }
 
   h1 {
-    text-align: center;
+    color: $brand-color;
   }
 }
 
