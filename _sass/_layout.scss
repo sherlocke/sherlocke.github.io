@@ -3,7 +3,6 @@
  */
 .site-header {
   background-color: $brand-color;
-  // border-bottom: 1px solid $grey-color-light;
   min-height: 56px;
 
   // Positioning context for the mobile navigation icon
@@ -11,14 +10,15 @@
 }
 
 .site-title {
-  background: url(/img/logo_white.png) no-repeat center center / cover;
+  background: url(/img/logo_white.png) no-repeat left center;
+  background-size: auto 60%;
   font-size: 26px;
   line-height: 56px;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
   text-indent: -3000em;
-  width: 200px;
+  width: 170px;
 }
 
 .site-nav {
@@ -183,18 +183,17 @@
 
     #hero-logo {
       background: url(/img/logo_white.png) no-repeat center center;
-      background-size: 600px 225px;
-      height: 175px;
+      height: 200px;
       margin: 0 auto;
       text-indent: -3000em;
       width: 600px;
     }
 
-      @include media-query($on-palm) {
+      @include media-query(650px) {
         #hero-logo {
-          background-size: 350px 132px;
-          height: 102px;
-          width: 350px;
+          background-size: 365px 81px;
+          height: 200px;
+          width: 400px;
         }
       }
 
