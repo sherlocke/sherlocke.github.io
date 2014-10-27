@@ -244,6 +244,10 @@
         transform: translateY(-1px);
       }
 
+      &:active {
+        transform: translateY(0);
+      }
+
       & + .hero-btn {
         margin-left: 2em;
       }
@@ -280,11 +284,12 @@
 .home-card {
   background-color: #fff;
   border-radius: 5px;
+  box-shadow: 0 1px 4px $brand-color;
   position: relative;
   top: -15%;
   margin: 0 auto;
-  padding: 1em;
-  width: 80%;
+  padding: 1.5em;
+  width: 90%;
 
   & + .home-card {
     margin-top: 1.5em;
@@ -345,9 +350,11 @@
 }
 
 .post-title {
+  border-bottom: 1px solid #000;
   font-size: 42px;
   letter-spacing: -1px;
   line-height: 1;
+  padding-bottom: 0.5em;
 
   @include media-query($on-laptop) {
     font-size: 36px;
