@@ -214,11 +214,13 @@
     vertical-align: middle;
 
     h2 {
+      @include v(animation, shiftUp .5s .2s ease-out);
       text-shadow: 0 2px 3px #444;
     }
   }
 
     .hero-btn {
+      @include v(animation, shiftDown .5s .3s ease-out);
       background-color: rgba(255,255,255,.1);
       border-radius: 0.25em;
       border: 1px solid #fff;
@@ -282,6 +284,7 @@
 }
 
 .home-card {
+  @include v(animation, shiftUp);
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 1px 4px $brand-color;
@@ -300,11 +303,19 @@
   }
 }
 
+  @for $i from 1 through 3 {
+    #home-card-#{$i} {
+      @include v(animation-duration, 600ms);
+      @include v(animation-delay, 200ms * $i);
+    }
+  }
+
   .home-card-img {
     display: block;
     float: right;
     height: 100px;
     width: 100px;
+    margin-left: 1em;
   }
 
 
