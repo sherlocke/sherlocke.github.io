@@ -35,7 +35,6 @@
  */
 .site-header {
   background-color: #fff;
-  min-height: 56px;
   width: 100%;
 
   position: fixed;
@@ -223,7 +222,7 @@
       background-color: rgba(255,255,255,.1);
       border-radius: 0.25em;
       border: 1px solid #fff;
-      box-shadow: 0 2px 3px #454545;
+      box-shadow: 0 1px 3px #454545;
       color: #fff;
       display: inline-block;
       margin: 3em auto 0;
@@ -239,7 +238,7 @@
 
       &:hover {
         background-color: #fff;
-        box-shadow: 0 3px 4px #333;
+        box-shadow: 0 2px 3px #333;
         color: $brand-color;
         text-decoration: none;
         transform: translateY(-1px);
@@ -261,7 +260,6 @@
         }
       }
 
-
     #home-more {
       background-color: $brand-color;
       color: #fff;
@@ -272,6 +270,12 @@
         text-decoration: none;
       }
     }
+
+#home-content {
+  display: block;
+  position: relative;
+  top: -35%;
+}
 
 .home-card {
   background-color: #fff;
@@ -290,6 +294,13 @@
     color: $brand-color;
   }
 }
+
+  .home-card-img {
+    display: block;
+    float: right;
+    height: 100px;
+    width: 100px;
+  }
 
 
 
