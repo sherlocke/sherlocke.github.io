@@ -55,7 +55,7 @@
 .site-title {
   @extend %site-header-link;
   background: url(/img/logo.png) no-repeat center center;
-  background-size: auto 60%;
+  background-size: 148px 33px;
   font-size: 26px;
   line-height: 56px;
   letter-spacing: -1px;
@@ -63,6 +63,10 @@
   float: left;
   text-indent: -3000em;
   width: 170px;
+
+  @include retina-query() {
+    background-image: url(/img/logo@2x.png);
+  }
 }
 
 .site-nav {
