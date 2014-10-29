@@ -141,6 +141,30 @@
   padding: $spacing-unit 0 0;
 }
 
+#top-btn {
+  position: relative;
+  left: 50%;
+  top: -50px;
+  margin-left: -20px;
+
+  border-radius: 50%;
+  display: block;
+  float: left;
+  width: 40px;
+  height: 40px;
+  background: #eee;
+  transition: box-shadow 0.3s;
+
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.75em;
+  text-transform: uppercase;
+
+  &:hover {
+    box-shadow: 0 1px 2px #555;
+  }
+}
+
 .footer-heading {
   font-size: 18px;
   margin-bottom: $spacing-unit / 2;
@@ -270,6 +294,7 @@
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 1px 4px darken($brand-color, 15%);
+  display: table;
   position: relative;
   top: -15%;
   margin: 0 auto;
@@ -293,12 +318,32 @@
   }
 
   .home-card-img {
-    display: block;
-    float: right;
-    height: 100px;
-    width: 100px;
-    margin-left: 1em;
+    border: 2px solid $brand-color;
+    border-radius: 50%;
+    display: inline-block;
+    height: 120px;
+    width: 120px;
+    margin-right: 1.5em;
+    vertical-align: top;
   }
+
+  .home-card-text {
+    display: inline-block;
+    width: calc(100% - 120px - 1.5em);
+    vertical-align: top;
+  }
+
+    @include media-query($on-palm) {
+      .home-card-img {
+        display: block;
+        margin: 0 auto 1.5em;
+      }
+
+      .home-card-text {
+        display: block;
+        width: 100%;
+      }
+    }
 
 
 
