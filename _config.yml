@@ -1,8 +1,8 @@
 # Site settings
 title: "Sherlocke: Powered by IBM Watson"
-email: contact@unhaltable.com
-description: With the power of IBM Watson, Sherlocke enhances CanLII.
+description: A smarter research tool for the modern age.
 url: "http://sherlocke.me"
+email: contact@unhaltable.com
 twitter_username: sherlockeapp
 github_username:  sherlocke
 
@@ -14,3 +14,12 @@ markdown: kramdown
 sass:
   sass_dir: _sass
   style: :compressed
+
+# Site nav
+navigation:
+ - title: Product
+   url:   /product/
+ - title: Pricing
+   url:   /pricing/
+ - title: Dev Blog
+   url:   /blog/

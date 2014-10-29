@@ -85,6 +85,7 @@
     top: 9px;
     right: 30px;
     background-color: #fff;
+    border: 1px solid $brand-color;
     border-radius: 5px;
     text-align: right;
 
@@ -92,7 +93,7 @@
       display: block;
       float: right;
       width: 36px;
-      height: 26px;
+      height: 34px;
       line-height: 0;
       padding-top: 10px;
       text-align: center;
@@ -120,6 +121,11 @@
     .page-link {
       display: block;
       padding: 5px 10px;
+      line-height: 24px;
+
+      &:hover {
+        box-shadow: none;
+      }
     }
   }
 }
@@ -140,7 +146,6 @@
   margin-bottom: $spacing-unit / 2;
 }
 
-.contact-list,
 .social-media-list {
   list-style: none;
   margin-left: 0;
@@ -156,7 +161,7 @@
 .footer-col {
   float: left;
   margin-bottom: $spacing-unit / 2;
-  padding-left: $spacing-unit / 2;
+  padding: 0 $spacing-unit / 2;
 }
 
 @include media-query($on-palm) {
@@ -339,7 +344,7 @@
 
 .post-title {
   border-bottom: 1px solid $brand-color;
-  font-size: 42px;
+  font-size: 36px;
   letter-spacing: -1px;
   line-height: 1;
   padding-bottom: 0.5em;
