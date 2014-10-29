@@ -14,3 +14,10 @@ markdown: kramdown
 sass:
   sass_dir: _sass
   style: :compressed
+
+# Site nav
+navigation:
+ - title: Product
+   url: /product/
+ - title: Dev Blog
+   url: /blog/
