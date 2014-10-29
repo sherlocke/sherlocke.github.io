@@ -371,6 +371,19 @@
     display: inline-block;
     font-size: 1rem;
     width: 50%;
+    vertical-align: top;
+
+    a {
+      display: block;
+    }
+
+    &:first-child {
+      padding-right: 1.25em;
+    }
+
+    &:last-child {
+      padding-left: 1.25em;
+    }
 
     @include media-query($on-palm) {
       display: block;
@@ -378,6 +391,11 @@
 
       & + .dev-col {
         margin-top: 2em;
+      }
+
+      &:first-child,
+      &:last-child {
+        padding: 0;
       }
     }
   }
