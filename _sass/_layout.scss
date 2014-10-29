@@ -300,15 +300,15 @@
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 1px 4px darken($brand-color, 15%);
-  display: table;
+  font-size: 0;
   position: relative;
   top: -15%;
   margin: 0 auto;
-  padding: 1.5em;
+  padding: 1.5rem;
   width: 90%;
 
   & + .home-card {
-    margin-top: 1.5em;
+    margin-top: 1.5rem;
   }
 
   h1 {
@@ -327,6 +327,7 @@
     border: 2px solid $brand-color;
     border-radius: 50%;
     display: inline-block;
+    font-size: 1rem;
     height: 120px;
     width: 120px;
     margin-right: 1.5em;
@@ -335,6 +336,7 @@
 
   .home-card-text {
     display: inline-block;
+    font-size: 1rem;
     width: calc(100% - 120px - 1.5em);
     vertical-align: top;
   }
