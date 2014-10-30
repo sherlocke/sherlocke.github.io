@@ -440,16 +440,20 @@
 /**
  * Media kit
  */
-#team {
-  margin-bottom: 3em;
+#team,
+#assets {
   text-align: center;
-  max-width: 500px;
-  margin: 0 auto;
 
   h1 {
     font-size: 2em;
     margin-bottom: 2em;
   }
+}
+
+#team {
+  margin-bottom: 3em;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
   .team-member {
