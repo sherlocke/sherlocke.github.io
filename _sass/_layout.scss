@@ -446,7 +446,10 @@
 
   h1 {
     font-size: 2em;
-    margin-bottom: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
   }
 }
 
@@ -454,6 +457,10 @@
   margin-bottom: 3em;
   max-width: 500px;
   margin: 0 auto;
+
+  h1 {
+    margin-bottom: 2em;
+  }
 }
 
   .team-member {
@@ -482,6 +489,18 @@
     h2 {
       font-size: 0.85em !important;
     }
+  }
+
+#assets-text {
+  text-align: left;
+
+  p {
+    font-size: 0.9em;
+  }
+}
+
+  #logo-samples {
+    margin-bottom: 1em;
   }
 
 
