@@ -586,19 +586,19 @@
 
 
 /**
- * Modal windows
+ * Beta signup
  */
-.modal {
+#mc_embed_signup {
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 4px;
   box-shadow: 0 1px 4px darken($brand-color, 15%);
   padding: 1.5em;
 
   label {
     display: block;
+    margin-bottom: 0.5em;
   }
 
-  textarea,
   input {
     border: 1px solid $brand-color;
     border-radius: 3px;
@@ -609,23 +609,8 @@
   }
 }
 
-  .modal-actions {
-    margin-top: 1.5em;
-
-    .button {
-      margin: 0 auto;
-      width: 150px;
-    }
-  }
-
-  #mc_embed_signup {
-    max-height: 450px;
-    overflow: auto;
-    max-width: 400px;
-  }
-
   .mc-field-group {
-    margin-top: 0.5em;
+    margin-bottom: 1em;
   }
 
   #mc_embed_signup input.mce_inline_error {
@@ -643,4 +628,11 @@
     margin-top: 1em;
     font-size: 0.8em;
     width: 100%;
+  }
+
+  #mc-embedded-subscribe {
+    cursor: pointer;
+    display: block;
+    margin: 2.5em auto 0;
+    width: 200px !important;
   }
