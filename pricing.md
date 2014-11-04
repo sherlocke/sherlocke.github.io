@@ -4,6 +4,4 @@ title: Pricing
 permalink: /pricing/
 ---
 
-## Pricing
-
 More information coming soon.
