@@ -583,3 +583,56 @@
     }
   }
 }
+
+
+/**
+ * Modal windows
+ */
+.modal {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px darken($brand-color, 15%);
+  padding: 1.5em;
+
+  label {
+    display: block;
+  }
+
+  input {
+    border: 1px solid $brand-color;
+    border-radius: 3px;
+    display: block;
+    font-family: $base-font-family;
+    padding: 0.5em 0.5em;
+    width: 375px;
+  }
+}
+
+  .modal-actions {
+    margin-top: 1.5em;
+
+    .button {
+      margin: 0 auto;
+      width: 150px;
+    }
+  }
+
+  #mc_embed_signup {
+    max-height: 400px;
+    overflow: auto;
+  }
+
+  .mc-field-group {
+    margin-top: 0.5em;
+  }
+
+  #mc_embed_signup input.mce_inline_error {
+    border-color: #e22c2c !important;
+  }
+
+  #mc_embed_signup div.mce_inline_error {
+    background-color: transparent !important;
+    color: #e22c2c !important;
+    padding: 0.25em 0 !important;
+    width: 300px;
+  }
