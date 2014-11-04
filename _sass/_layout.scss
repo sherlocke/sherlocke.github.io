@@ -604,7 +604,7 @@
     display: block;
     font-family: $base-font-family;
     padding: 0.5em 0.5em;
-    width: 375px;
+    width: 100%;
   }
 }
 
@@ -620,6 +620,7 @@
   #mc_embed_signup {
     max-height: 400px;
     overflow: auto;
+    max-width: 400px;
   }
 
   .mc-field-group {
@@ -634,5 +635,11 @@
     background-color: transparent !important;
     color: #e22c2c !important;
     padding: 0.25em 0 !important;
-    width: 300px;
+    width: 100%;
+  }
+
+  #mce-responses {
+    margin-top: 1em;
+    font-size: 0.8em;
+    width: 100%;
   }
