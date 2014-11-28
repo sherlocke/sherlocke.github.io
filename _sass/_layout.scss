@@ -232,13 +232,15 @@
     vertical-align: middle;
 
     h2 {
-      @include v(animation, shiftUp .5s .2s ease-out);
+      @include v(animation, shiftUp .5s .2s ease-out forwards);
+      opacity: 0;
       text-shadow: 0 2px 3px #444;
     }
   }
 
     .hero-btn {
-      @include v(animation, shiftUp .5s .3s ease-out);
+      @include v(animation, shiftUp .5s .3s ease-out forwards);
+      opacity: 0;
       background-color: rgba(255,255,255,.1);
       border-radius: 0.25em;
       border: 1px solid #fff;
@@ -302,7 +304,8 @@
 }
 
 .home-card {
-  @include v(animation, shiftUp);
+  @include v(animation, shiftUp forwards);
+  opacity: 0;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 1px 4px darken($brand-color, 15%);
