@@ -1,0 +1,196 @@
+---
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$brand-color:      #4179a1;
+$background-color: #dedede;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Using media queries with like this:
+// @include media-query($palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin retina-query() {
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @content;
+  }
+}
+
+
+/* Applies vendor prefixes to $prop. */
+@mixin v($prop, $args) {
+  -webkit-#{$prop}: $args;
+     -moz-#{$prop}: $args;
+      -ms-#{$prop}: $args;
+       -o-#{$prop}: $args;
+          #{$prop}: $args;
+}
+
+
+/* Animations */
+
+@keyframes shiftUp {
+  0%   { opacity: 0; transform: translateY(500px); }
+  15%  { opacity: 1; transform: translateY(0px); }
+  85%  { opacity: 1; transform: translateY(0px); }
+  100% { opacity: 0; transform: translateY(-500px); }
+}
+
+@-moz-keyframes shiftUp {
+  0%   { opacity: 0; -moz-transform: translateY(500px); }
+  15%  { opacity: 1; -moz-transform: translateY(0px); }
+  85%  { opacity: 1; -moz-transform: translateY(0px); }
+  100% { opacity: 0; -moz-transform: translateY(-500px); }
+}
+
+@-webkit-keyframes shiftUp {
+  0%   { opacity: 0; -webkit-transform: translateY(500px); }
+  15%  { opacity: 1; -webkit-transform: translateY(0px); }
+  85%  { opacity: 1; -webkit-transform: translateY(0px); }
+  100% { opacity: 0; -webkit-transform: translateY(-500px); }
+}
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "base";
+
+
+body {
+  background: $brand-color url(/img/newyork.jpg) center center / cover;
+  color: $grey-color-dark;
+  overflow: hidden;
+  padding: 0;
+}
+
+#logo {
+  position: fixed;
+  left: 1.5em;
+  bottom: 1.5em;
+
+  height: 100px;
+
+  z-index: 999999999999;
+}
+
+%clip {
+  background-color: $brand-color;
+  height: 200px;
+  width: 100%;
+  transform: skewY(5deg);
+
+  position: fixed;
+  left: 0;
+
+  z-index: 9999999999;
+}
+
+#top-clip {
+  @extend %clip;
+  top: -100px;
+}
+
+#bottom-clip {
+  @extend %clip;
+  bottom: -100px;
+}
+
+#demo-cards {
+  background-color: rgba($brand-color,.8);
+  height: 100%;
+  width: 100%;
+}
+
+%card {
+  @include v(animation, shiftUp);
+  opacity: 0;
+  margin: 0 auto;
+  padding: 1.5rem;
+  height: 250px;
+  width: 1000px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -125px;
+  margin-left: -500px;
+}
+
+.intro-card {
+  @extend %card;
+  color: #fff;
+  text-align: center;
+  padding-top: 4em;
+
+  .demo-card-text {
+    display: block !important;
+    width: 100% !important;
+  }
+}
+
+.demo-card {
+  @extend %card;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px darken($brand-color, 15%);
+  display: table;
+
+  h1 {
+    color: $brand-color;
+  }
+}
+
+  @for $i from 1 through 4 {
+    #demo-card-#{$i} {
+      $time: 5000ms;
+
+      @include v(animation-duration, $time);
+      @include v(animation-delay, $time * ($i - 1));
+    }
+  }
+
+  .demo-card-img {
+    display: table-cell;
+    width: 120px;
+    vertical-align: middle;
+
+    img {
+      border: 2px solid $brand-color;
+      border-radius: 50%;
+      height: 120px;
+    }
+  }
+
+  .demo-card-text {
+    display: table-cell;
+    padding-left: 1.5em;
+    vertical-align: middle;
+  }
