@@ -131,6 +131,7 @@ body {
 
 %card {
   @include v(animation, shiftUp);
+  -webkit-transform: translateZ(0);
   opacity: 0;
   margin: 0 auto;
   padding: 1.5rem;
@@ -156,6 +157,18 @@ body {
   }
 }
 
+.image-card {
+  @extend %card;
+  text-align: center;
+  height: 500px;
+  margin-top: -250px;
+
+  img {
+    box-shadow: 0 1px 4px darken($brand-color, 15%);
+    width: 80%;
+  }
+}
+
 .demo-card {
   @extend %card;
   background-color: #fff;
@@ -168,7 +181,7 @@ body {
   }
 }
 
-  @for $i from 1 through 4 {
+  @for $i from 1 through 6 {
     #demo-card-#{$i} {
       $time: 8000ms;
 

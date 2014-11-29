@@ -4,4 +4,4 @@ setInterval(function() {
 
   el.after(newone);
   $("#demo-cards:last").remove();
-}, 20000);
+}, 48000);
