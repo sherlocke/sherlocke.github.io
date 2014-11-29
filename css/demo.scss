@@ -170,7 +170,7 @@ body {
 
   @for $i from 1 through 4 {
     #demo-card-#{$i} {
-      $time: 5000ms;
+      $time: 8000ms;
 
       @include v(animation-duration, $time);
       @include v(animation-delay, $time * ($i - 1));
